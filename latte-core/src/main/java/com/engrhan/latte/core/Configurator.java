@@ -1,5 +1,6 @@
 package com.engrhan.latte.core;
 
+import android.app.Activity;
 import android.text.TextUtils;
 
 import com.joanzapata.iconify.IconFontDescriptor;
@@ -15,7 +16,7 @@ import java.util.List;
  * @date 2018/5/9
  */
 
-final class Configurator {
+public final class Configurator {
 
     private static final HashMap<String, Object> LATTE_CONFIGS = new HashMap<>();
     private static final List<IconFontDescriptor> ICONS = new ArrayList<>();
@@ -54,6 +55,10 @@ final class Configurator {
     final Configurator withIcons(IconFontDescriptor icons) {
         ICONS.add(icons);
         return this;
+    }
+
+    public final void withActivity(Activity activity) {
+        LATTE_CONFIGS.put(ConfigType.ACTIVITY.name(), activity);
     }
 
 

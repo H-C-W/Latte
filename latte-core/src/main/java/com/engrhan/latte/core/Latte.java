@@ -6,7 +6,8 @@ import java.util.HashMap;
 
 
 /**
- * Created by engrh on 2018/5/9.
+ * @author engrh
+ * @date 2018/5/9
  */
 
 public final class Latte {
@@ -15,7 +16,15 @@ public final class Latte {
         return Configurator.getInstance();
     }
 
-    private static HashMap<String, Object> getConfigrations() {
+    public static Configurator getConfigurator() {
+        return Configurator.getInstance();
+    }
+
+    public static Context getApplicationContext() {
+        return (Context) getConfigrations().get(ConfigType.APPLICATION_CONTENT.name());
+    }
+
+    public static HashMap<String, Object> getConfigrations() {
         return Configurator.getInstance().getLatteConfigs();
     }
 

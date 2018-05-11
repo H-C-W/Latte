@@ -4,13 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.engrhan.latte.MainActivity">
-
-    <TextView
-        android:id="@+id/txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    tools:context="com.engrhan.latte.activity.MainActivity">
 
     <ImageView
         android:id="@+id/img"
@@ -19,7 +13,8 @@
 
     <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/iconText"
-        android:text="{fa-key}"
+        android:text="{fa-coffee}"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />

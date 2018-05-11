@@ -1,5 +1,6 @@
 package com.engrhan.latte.core;
 
+import android.app.Activity;
 import android.app.Application;
 
 import com.engrhan.latte.icon.IconFontModule;
