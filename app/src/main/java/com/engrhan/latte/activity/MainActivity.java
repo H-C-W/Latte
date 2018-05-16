@@ -17,28 +17,16 @@ import me.yokeyword.fragmentation.SupportActivityDelegate;
  */
 public class MainActivity extends ProxyActivity {
 
-
-
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.hide();
-        }
-        Latte.getConfigurator().withActivity(this);
-    }
-
     @Override
     public LatteDelegate setRootDelegete() {
         Log.e("latte", "setRootDelegate");
         return new MainDelegate();
     }
 
-
     @Override
     public SupportActivityDelegate getSupportDelegate() {
         return null;
     }
+
+
 }

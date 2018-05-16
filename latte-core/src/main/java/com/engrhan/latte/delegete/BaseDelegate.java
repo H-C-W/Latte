@@ -36,8 +36,8 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
             rootView = inflater.inflate((Integer) setLayout(), container, false);
         } else if (setLayout() instanceof View) {
             rootView = (View) setLayout();
-            onBindView(savedInstanceState, rootView);
         }
+        onBindView(savedInstanceState, rootView);
 
         if (rootView != null) {
             unbinder = ButterKnife.bind(this, rootView);
